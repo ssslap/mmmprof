@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме - Максат</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #fff;
+            padding: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .resume-header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #6366f1;
+            margin-bottom: 30px;
+        }
+        
+        .resume-header h1 {
+            font-size: 2.5rem;
+            color: #1f2937;
+            margin-bottom: 5px;
+        }
+        
+        .resume-header .role {
+            font-size: 1.25rem;
+            color: #6366f1;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        
+        .contact-row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+        
+        .contact-row a {
+            color: #6366f1;
+            text-decoration: none;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .section-title {
+            font-size: 1.25rem;
+            color: #6366f1;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .section-content {
+            padding-left: 10px;
+        }
+        
+        .experience-item, .education-item {
+            margin-bottom: 15px;
+        }
+        
+        .experience-item h3, .education-item h3 {
+            font-size: 1.1rem;
+            color: #1f2937;
+        }
+        
+        .experience-item .company, .education-item .school {
+            color: #6366f1;
+            font-weight: 500;
+        }
+        
+        .experience-item .date, .education-item .date {
+            font-size: 0.9rem;
+            color: #6b7280;
+            margin-bottom: 8px;
+        }
+        
+        .experience-item ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            color: #4b5563;
+        }
+        
+        .experience-item li {
+            margin-bottom: 5px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        
+        .skill-category h4 {
+            font-size: 1rem;
+            color: #1f2937;
+            margin-bottom: 5px;
+        }
+        
+        .skill-category p {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+        
+        .projects-list {
+            list-style: none;
+        }
+        
+        .projects-list li {
+            margin-bottom: 10px;
+            padding-left: 15px;
+            position: relative;
+        }
+        
+        .projects-list li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #6366f1;
+        }
+        
+        .projects-list a {
+            color: #6366f1;
+            text-decoration: none;
+        }
+        
+        .about-text {
+            color: #4b5563;
+        }
+        
+        @media print {
+            body {
+                padding: 20px;
+            }
+            
+            .section {
+                break-inside: avoid;
+            }
+        }
+        
+        .print-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #6366f1, #4f46e5);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: 500;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .print-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        @media print {
+            .print-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="resume-header">
+        <h1>Максат</h1>
+        <p class="role">Backend Разработчик</p>
+        <div class="contact-row">
+            <span>📧 <a href="mailto:nineninenine@gmail.com">nineninenine@gmail.com</a></span>
+            <span>📱 +7 705 999 99 99</span>
+            <span>🔗 <a href="https://github.com/ssslap">github.com/ssslap</a></span>
+        </div>
+    </header>
+
+    <section class="section">
+        <h2 class="section-title">О себе</h2>
+        <div class="section-content">
+            <p class="about-text">
+                Backend разработчик с опытом создания надёжных и масштабируемых серверных решений. 
+                Специализируюсь на разработке API, работе с базами данных и оптимизации производительности. 
+                Стремлюсь к написанию чистого, поддерживаемого кода и постоянному профессиональному развитию.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Опыт работы</h2>
+        <div class="section-content">
+            <div class="experience-item">
+                <h3>Backend Разработчик</h3>
+                <p class="company">SilenceAi</p>
+                <p class="date">Настоящее время</p>
+                <ul>
+                    <li>Разработка и поддержка серверных API</li>
+                    <li>Проектирование и оптимизация баз данных</li>
+                    <li>Интеграция с внешними сервисами и API</li>
+                    <li>Написание технической документации</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Образование</h2>
+        <div class="section-content">
+            <div class="education-item">
+                <h3>Высшее образование</h3>
+                <p class="school">AIU (American University)</p>
+                <p class="date">Текущее обучение</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Навыки</h2>
+        <div class="section-content">
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Backend разработка</h4>
+                    <p>REST API, серверная логика, микросервисы</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Базы данных</h4>
+                    <p>SQL, NoSQL, проектирование схем</p>
+                </div>
+                <div class="skill-category">
+                    <h4>DevOps</h4>
+                    <p>Docker, CI/CD, развёртывание</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Инструменты</h4>
+                    <p>Git, Linux, VS Code</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Проекты</h2>
+        <div class="section-content">
+            <ul class="projects-list">
+                <li>
+                    <strong>WRLD Sneakers</strong> — Интернет-магазин кроссовок с современным дизайном
+                    <br><a href="https://ssslap.github.io/wrld_sneakers_proof/">ssslap.github.io/wrld_sneakers_proof</a>
+                </li>
+                <li>
+                    <strong>PetBolka</strong> — Веб-приложение для любителей домашних животных
+                    <br><a href="https://ssslap.github.io/petbolka/">ssslap.github.io/petbolka</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <button class="print-btn" onclick="window.print()">📄 Сохранить как PDF</button>
+</body>
+</html>
